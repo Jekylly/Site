@@ -1,0 +1,98 @@
+---
+layout: default
+---
+
+  <div class="parallax-container top">
+    <div class="parallax">
+      <img src="{% asset 'san-francisco-1920-optimized.jpg' @path %}">
+    </div>
+
+    <br><br>
+    <h1 class="header center white-text hide-on-small-only galada">{{ site.title }}</h1>
+    <div class="row center">
+      <h5 class="header col s12 light white-text">{{ content }}</h5>
+    </div>
+
+    <div class="row center">
+      <a href="/tutorials/" class="btn-large waves-effect waves-light deep-purple darken-3">Get Started</a>
+    </div>
+    <br><br>
+
+
+  </div>
+
+  <div class="section white">
+    <div class="row container">
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center deep-purple-text text-darken-3"><i class="material-icons">flash_on</i></h2>
+            <h5 class="center">Lightning fast.</h5>
+
+            <p class="light">
+              <a target="_blank" href="http://jekyllrb.com/" class="deep-purple-text text-lighten-3">Jekyll</a> gives you the ability to create lightning fast static websites using a Ruby Based
+              command line tool. Install on Window, Linux and Mac and start building fast content driven sites.
+            </p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center deep-purple-text text-darken-3"><i class="material-icons">group</i></h2>
+            <h5 class="center">Community Driven</h5>
+
+            <p class="light">
+              Jekylly offers community driven content. We let you upload themes and tutorials through a PR to the content repos on <a href="https://github.com/jekylly">GitHub.</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center deep-purple-text text-darken-3"><i class="material-icons">cloud_upload</i></h2>
+            <h5 class="center">Contribute</h5>
+            <p class="light">
+            Sign up and start uploading themes and tutorials today. Be part of the community you love.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="parallax-container themes">
+    <div class="parallax">
+      <img src="{% asset 'html-and-css.jpeg' @path %}">
+    </div>
+
+    <br><br>
+    <h1 class="header center white-text">Themes</h1>
+    <div class="row center">
+      <h5 class="header col s12 light white-text">
+        Powerful Jekyll themes to help your project take off.
+      </h5>
+    </div>
+
+    <div class="row center">
+      <a href="/tutorials/" class="btn-large waves-effect waves-light deep-purple darken-3">Browse</a>
+    </div>
+    <br><br>
+  </div>
+
+
+    <div class="container last-post">
+    <section>
+        <ul class="collection">
+        {% for post in site.posts %}
+        <li class="collection-item avatar deep-purple darken-3 waves-effect deep-purple-text text-lighten-3">
+          {% assign date_format = site.minima.date_format | default: "%m/%d" %}
+          <div class="date-post">{{ post.date | date: date_format }}</div>
+          <span class="title"><a class="white-text post-link" href="{{ post.url | relative_url }}">{{ post.title  }}</a></span>
+          <p class="white-text">
+             {{ post.content | truncatewords: 10 }}
+          </p>
+          <a href="{{ post.url | relative_url }}" class="secondary-content"><i class="material-icons white-text">navigate_next</i></a>
+        </li>
+        {% endfor %}
+        </ul>
+    </section>
+    </div>

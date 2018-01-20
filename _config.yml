@@ -1,0 +1,34 @@
+title: Jekylly
+author: Kyle Kirkby
+url: "https://jekylly.com"
+email: kylekirkbyy@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  A GitHub community driven Jekyll tutorial hub which aims to give the web
+  development community the detailed and up to date knowledge for building
+  awesome Jekyll static websites.
+
+twitter_username: jekyllykej
+github_username:  jekylly
+
+sass:
+  sass_dir: _sass
+  style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+
+highlighter: rouge
+
+plugins:
+  - jekyll-assets
+  - uglifier
+
+exclude:
+  - manifest.json
+  - .htaccess
+assets:
+  destination: "/assets"
+  compression: true
+  gzip: true
+  sources:
+    - assets/css
+    - assets/js
+    - assets/img
+    - _sass
