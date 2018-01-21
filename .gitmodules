@@ -1,0 +1,6 @@
+[submodule "_themes"]
+	path = _themes
+	url = https://github.com/jekylly/themes
+[submodule "_tutorials"]
+	path = _tutorials
+	url = https://github.com/jekylly/tutorials/
