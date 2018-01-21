@@ -1,0 +1,9 @@
+<div class="carousel carousel-slider">
+  {% assign iter = 0 %}
+  {% for slide in include.images %}
+    <a class="carousel-item" href="#{{site.carousel_params[item]}}!">
+      <img class="materialboxed" src="{% asset '{{slide}}' @path %}">
+    </a>
+    {% assign iter = item + 1 %}
+  {% endfor %}
+</div>

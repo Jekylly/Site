@@ -1,7 +1,51 @@
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #4527a0;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #836ac1 ;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #000;
+}
+
+a#scroll-top {
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    display: none;
+}
+
+#scroll-top > i.material-icons {
+    display: block;
+    margin: -20px;
+}
+
 nav ul li:hover {
   @extend .deep-purple, .darken-4;
 }
 
+@media #{$medium-and-down} {
+  a#logo-container {
+    padding-left: 0px !important;
+}
+  .sticky.fixed {
+      position: absolute !important;
+  }
+}
+
+a#logo-container {
+    padding-left: 20px;
+}
 
 @media #{$small-and-down} {
   .parallax-container.top{
@@ -22,7 +66,7 @@ li.collection-item.avatar.deep-purple.darken-3.waves-effect {
     width: 100%;
 }
 
-i.material-icons.white-text {
+.collection i.material-icons.white-text {
     top: 13px;
     position: relative;
 }
@@ -36,8 +80,9 @@ figure.highlight {
 }
 
 body{
-
-}
+  overflow-y: scroll;
+      overflow-x: hidden;
+  }
 h1, h2, h3, h4, h5, h6 {
     -webkit-font-smoothing: antialiased;
 }
@@ -134,6 +179,12 @@ a.collapsible-header.white-text {
 ul.section.table-of-contents.fixed {
     position: fixed;
     top: 0px;
+    left: 20px;
+}
+.sticky.fixed {
+    position: fixed;
+    top: 50px;
+    left: 20px;
 }
 
 
@@ -142,4 +193,87 @@ ul.section.table-of-contents.fixed {
 }
 .table-of-contents a:hover {
     border-color: #4527a0;
+}
+
+li.sub-page {
+    margin-left: 10px;
+}
+
+li.sub-sub-page {
+    margin-left: 20px;
+}
+.hideme
+{
+    opacity:0;
+}
+
+
+.feature {
+    border-radius: 120px;
+    background-color: white;
+    width: 120px;
+    height: 120px;
+    line-height: 120px;
+    text-align: center;
+    font-size: 14px;
+    position: absolute;
+}
+
+
+@media(max-width:600px){
+  .feature.jekylly-themes {
+      right: 173px !important;
+      top: 152px  !important;
+  }
+
+  .feature.jekylly-contribute {
+      left: 138px !important;
+      bottom: 120px  !important;
+  }
+
+  .feature.jekylly-learn {
+      top: 16px !important;
+      left: 10px !important;
+  }
+}
+
+.feature.jekylly-themes {
+    right: 75px ;
+    top: 80px;
+}
+
+.feature.jekylly-contribute {
+    left: 30px;
+    bottom: 65px;
+}
+
+.feature.jekylly-learn {
+    top: 16px;
+    left: 30px;
+}
+
+.feature-text {
+  opacity: 0;
+  transition: all 200ms ease;
+  transition-delay: 200ms;
+}
+
+.feature > i.material-icons {
+    font-size: 45px;
+    top: 37px;
+    right: 37px;
+    position: absolute;
+    opacity: 1;
+
+    transition: all 200ms ease;
+}
+.feature:hover i.material-icons {
+  opacity: 0;
+}
+.feature:hover .feature-text {
+  opacity: 1;
+}
+
+.parallax-container.tutorials {
+    height: 300px;
 }

@@ -1,0 +1,55 @@
+{% if site.data.side-bar %}
+<div class="sticky">
+<ul class="section table-of-contents" id="side-bar">
+  {% for group in site.data.side-bar %}
+
+    {% for url in group.urls %}
+      {% if page.permalink == url %}
+        {% for main-page in group.pages %}
+
+          {% for site-page in site.pages %}
+            {% if site-page.permalink == main-page.url %}
+              {% assign anchor = site-page.anchor %}
+            {% endif %}
+          {% endfor %}
+
+          <li><a {% if main-page.url == page.permalink %}class="active"{% endif %} href="#{{anchor}}">{{main-page.text}}</a></li>
+          {% if main-page.options %}
+
+            {% for sub-page in main-page.options %}
+
+              {% for site-sub-page in site.pages %}
+                {% if site-sub-page.permalink == sub-page.url %}
+                  {% assign sub-anchor = site-sub-page.anchor %}
+                {% endif %}
+              {% endfor %}
+
+              <li class="sub-page "><a {% if sub-page.url == page.permalink %}class="active"{% endif %} href="#{{sub-anchor}}">{{sub-page.text}}</a></li>
+
+              {% if sub-page.options %}
+
+                {% for sub-sub-page in sub-page.options %}
+                  {% for site-sub-sub-page in site.pages %}
+                    {% if site-sub-sub-page.permalink == sub-sub-page.url %}
+                      {% assign sub-sub-anchor = site-sub-sub-page.anchor %}
+                    {% endif %}
+                  {% endfor %}
+                  <li class="sub-sub-page "><a {% if sub-sub-page.url == page.permalink %}class="active"{% endif %} href="#{{sub-sub-anchor}}">{{sub-sub-page.text}}</a></li>
+                {% endfor %}
+
+              {% endif %}
+
+            {% endfor %}
+
+          {% endif %}
+
+        {% endfor %}
+      {% endif %}
+    {% endfor %}
+
+  {% endfor %}
+</ul>
+</div>
+{% else %}
+Please add a _data/side-bar.yml data file.
+{% endif %}

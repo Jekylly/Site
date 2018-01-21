@@ -1,0 +1,23 @@
+
+<nav>
+   <div class="nav-wrapper deep-purple darken-4 white-text">
+     <div class="container">
+       <div class="col s12" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+         {% assign pages = page.url | split: "/" %}
+         {% capture current-path %}/{% endcapture  %}
+         {% for breadcrumb-page in pages %}
+              {% if forloop.first %}
+              {% elsif forloop.last and breadcrumb-page == "index.html" %}
+              {% else %}
+                {% capture current-path %}{{current-path}}{{breadcrumb-page}}/{% endcapture  %}
+                {% if breadcrumb-page == "/" %}
+                <a href="/" class="breadcrumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem" >Home</a>
+                {% else %}
+                <a href="{{current-path}}" class="breadcrumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem" >{{breadcrumb-page | replace: "-", " " | capitalize}}</a>
+                {% endif %}
+              {% endif %}
+         {% endfor %}
+       </div>
+     </div>
+   </div>
+ </nav>

@@ -1,2 +1,6 @@
 ErrorDocument 404 https://jekylly.com/404/
 ErrorDocument 500 https://jekylly.com/500/
+
+<filesMatch ".(ico|pdf|flv|jpg|svg|jpeg|png|gif|js|css|swf)$">
+Header set Cache-Control "max-age=14400, public"
+</filesMatch>

@@ -1,6 +1,17 @@
 ---
 layout: default
 ---
+  <!-- Element Showed -->
+  <a id="menu" class="waves-effect waves-light" style="display:none; right:0;"></a>
+
+  <!-- Tap Target Structure -->
+  <div class="tap-target deep-purple darken-3" data-activates="menu">
+    <div class="tap-target-content">
+      <a href="/jekyll/"><div class="feature jekylly-learn deep-purple darken-4 waves-effect waves-circle waves-light white-text"><i class="material-icons">laptop_mac</i><span class="feature-text">Learn</span></div></a>
+      <a href="/themes/"><div class="feature jekylly-themes deep-purple darken-4 waves-effect waves-circle waves-light white-text"><i class="material-icons">palette</i><span class="feature-text">Themes</span></div></a>
+      <a href="/contribute/"><div class="feature jekylly-contribute deep-purple darken-4 waves-effect waves-circle waves-light white-text"><i class="material-icons">note_add</i><span class="feature-text">Contribute</span></div></a>
+    </div>
+  </div>
 
   <div class="parallax-container top">
     <div class="parallax">
@@ -8,13 +19,13 @@ layout: default
     </div>
 
     <br><br>
-    <h1 class="header center white-text hide-on-small-only galada">{{ site.title }}</h1>
+    <h1 class="header center white-text hide-on-small-only galada animated  bounceInDown">{{ site.title }}</h1>
     <div class="row center">
-      <h5 class="header col s12 light white-text">{{ content }}</h5>
+      <h5 class="header col s12 light white-text  animated  bounceInDown">{{ content }}</h5>
     </div>
 
     <div class="row center">
-      <a href="/tutorials/" class="btn-large waves-effect waves-light deep-purple darken-3">Get Started</a>
+      <a href="#" class="btn-large waves-effect waves-light deep-purple darken-3  animated  bounceInUp" onclick="$('.tap-target').tapTarget('open')">Get Started</a>
     </div>
     <br><br>
 
@@ -27,7 +38,7 @@ layout: default
       <div class="row">
         <div class="col s12 m4">
           <div class="icon-block">
-            <h2 class="center deep-purple-text text-darken-3"><i class="material-icons">flash_on</i></h2>
+            <h2 class="center deep-purple-text text-darken-3"><i class="material-icons wiggle">flash_on</i></h2>
             <h5 class="center">Lightning fast.</h5>
 
             <p class="light">
@@ -39,7 +50,8 @@ layout: default
 
         <div class="col s12 m4">
           <div class="icon-block">
-            <h2 class="center deep-purple-text text-darken-3"><i class="material-icons">group</i></h2>
+            <h2 class="center deep-purple-text text-darken-3"><i class="material-icons wiggle">group</i></h2>
+
             <h5 class="center">Community Driven</h5>
 
             <p class="light">
@@ -50,7 +62,7 @@ layout: default
 
         <div class="col s12 m4">
           <div class="icon-block">
-            <h2 class="center deep-purple-text text-darken-3"><i class="material-icons">cloud_upload</i></h2>
+            <h2 class="center deep-purple-text text-darken-3"><i class="material-icons wiggle">cloud_upload</i></h2>
             <h5 class="center">Contribute</h5>
             <p class="light">
             Sign up and start uploading themes and tutorials today. Be part of the community you love.</p>
@@ -82,10 +94,10 @@ layout: default
     <div class="container last-post">
     <section>
         <ul class="collection">
-        {% for post in site.posts %}
+          {% for post in site.posts limit: 5  %}
         <li class="collection-item avatar deep-purple darken-3 waves-effect deep-purple-text text-lighten-3">
-          {% assign date_format = site.minima.date_format | default: "%m/%d" %}
-          <div class="date-post">{{ post.date | date: date_format }}</div>
+          {% assign date_format = site.minima.date_format | default: "%m/%d"  %}
+          <div class="date-post deep-purple darken-4">{{ post.date | date: date_format }}</div>
           <span class="title"><a class="white-text post-link" href="{{ post.url | relative_url }}">{{ post.title  }}</a></span>
           <p class="white-text">
              {{ post.content | truncatewords: 10 }}

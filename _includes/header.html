@@ -1,44 +1,31 @@
-<nav class="deep-purple darken-3" role="navigation">
-    <div class="nav-wrapper container">
+<div class="navbar-fixed">
+  <nav class="deep-purple darken-3" role="navigation">
+    <div class="nav-wrapper">
 
-      <a id="logo-container" class="brand-logo galada" href="{{ "/" | relative_url }}">
+      <a id="logo-container" class="brand-logo galada " href="{{ "/" | relative_url }}">
         Jekylly
       </a>
 
 
       <ul class="right hide-on-med-and-down ">
-        <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Tutorials<i class="material-icons right">arrow_drop_down</i></a></li>
-        <li><a class="dropdown-button" href="#!" data-activates="dropdown2">Jekyll Themes<i class="material-icons right">arrow_drop_down</i></a></li>
-        <li>
-          <a href="/useful/">
-            Useful
-          </a>
-        </li>
-
-        <li>
-          <a href="/">
-            Contact
-          </a>
-        </li>
-
-
+        <li><a class="dropdown-button" href="/jekyll/" data-activates="dropdown1">Learn Jekyll<i class="material-icons right">arrow_drop_down</i></a></li>
+        <li><a class="dropdown-button" href="/themes/" data-activates="dropdown2">Jekyll Themes<i class="material-icons right">arrow_drop_down</i></a></li>
+        <li><a class="dropdown-button" href="/contribute/" data-activates="dropdown3">Contribute<i class="material-icons right">arrow_drop_down</i></a></li>
+        <li><a href="/blog/">Blog</a></li>
 
       </ul>
 
       <ul id='dropdown1' class='dropdown-content deep-purple darken-3'>
-        <li><a class="white-text waves-effect waves-deep-purple" href="/jekyll/layouts/">_layouts</a></li>
-        <li><a class="white-text waves-effect waves-deep-purple" href="/tutorials/includes/">_includes</a></li>
-        <li><a class="white-text waves-effect waves-deep-purple" href="/tutorials/data/">_data</a></li>
-        <li><a class="white-text waves-effect waves-deep-purple" href="/tutorials/plugins/">_plugins</a></li>
+        <li><a class="white-text waves-effect waves-deep-purple" href="/jekyll/">The Manual</a></li>
+        <li><a class="white-text waves-effect waves-deep-purple" href="/jekyll/browse/">Browse Tutorials</a></li>
       </ul>
       <ul id='dropdown2' class='dropdown-content deep-purple darken-3'>
-        <li><a class="white-text waves-effect waves-deep-purple" href="/themes/free/">Free</a></li>
-        <li><a class="white-text waves-effect waves-deep-purple" href="/themes/paid/">Paid</a></li>
-        <li><a class="white-text waves-effect waves-deep-purple" href="/themes/materialize/">Material Design</a></li>
-        <li><a class="white-text waves-effect waves-deep-purple" href="/themes/angular/">Angular</a></li>
-        <li><a class="white-text waves-effect waves-deep-purple" href="/themes/reactjs/">ReactJS</a></li>
-        <li><a class="white-text waves-effect waves-deep-purple" href="/themes/bootstrap3/">Bootstrap 3</a></li>
-        <li><a class="white-text waves-effect waves-deep-purple" href="/themes/bootstrap4/">Bootstrap 4</a></li>
+        <li><a class="white-text waves-effect waves-deep-purple" href="/themes/">The Manual</a></li>
+        <li><a class="white-text waves-effect waves-deep-purple" href="/themes/paid/">Browse Themes</a></li>
+      </ul>
+      <ul id='dropdown3' class='dropdown-content deep-purple darken-3'>
+        <li><a class="white-text waves-effect waves-deep-purple" href="/upload/theme/">Upload Theme</a></li>
+        <li><a class="white-text waves-effect waves-deep-purple" href="/upload/tutorial/">Upload Tutorial</a></li>
       </ul>
 
       <ul id="nav-mobile" class="side-nav deep-purple darken-3">
@@ -46,13 +33,14 @@
         <li class="no-padding">
         <ul class="collapsible collapsible-accordion">
           <li>
-            <a class="collapsible-header white-text">Tutorials<i class="material-icons white-text right">arrow_drop_down</i></a>
+            <a class="collapsible-header white-text" href="#">Learn Jekyll<i class="material-icons white-text right">arrow_drop_down</i></a>
             <div class="collapsible-body">
               <ul class="deep-purple darken-2">
+                <li><a class="white-text waves-effect waves-deep-purple" href="/jekyll/">Get Started</a></li>
                 <li><a class="white-text waves-effect waves-deep-purple" href="/jekyll/layouts/">_layouts</a></li>
-                <li><a class="white-text waves-effect waves-deep-purple" href="/tutorials/includes/">_includes</a></li>
-                <li><a class="white-text waves-effect waves-deep-purple" href="/tutorials/data/">_data</a></li>
-                <li><a class="white-text waves-effect waves-deep-purple" href="/tutorials/plugins/">_plugins</a></li>
+                <li><a class="white-text waves-effect waves-deep-purple" href="/jekyll/includes/">_includes</a></li>
+                <li><a class="white-text waves-effect waves-deep-purple" href="/jekyll/data/">_data</a></li>
+                <li><a class="white-text waves-effect waves-deep-purple" href="/jekyll/plugins/">_plugins</a></li>
               </ul>
             </div>
           </li>
@@ -63,7 +51,7 @@
         <li class="no-padding">
         <ul class="collapsible collapsible-accordion">
           <li>
-            <a class="collapsible-header white-text">Themes<i class="material-icons white-text right">arrow_drop_down</i></a>
+            <a class="collapsible-header white-text" href="#">Themes<i class="material-icons white-text right">arrow_drop_down</i></a>
             <div class="collapsible-body">
               <ul class="deep-purple darken-2">
                 <li><a class="white-text waves-effect waves-deep-purple" href="/themes/free/">Free</a></li>
@@ -79,17 +67,21 @@
         </ul>
       </li>
 
-        <li>
-          <a class="white-text" href="/themes/">
-           Themes
-          </a>
-        </li>
 
-        <li>
-          <a class="white-text" href="/useful/">
-            Useful
-          </a>
-        </li>
+        <li class="no-padding">
+        <ul class="collapsible collapsible-accordion">
+          <li>
+            <a class="collapsible-header white-text" href="#">Useful<i class="material-icons white-text right">arrow_drop_down</i></a>
+            <div class="collapsible-body">
+              <ul class="deep-purple darken-2">
+                <li><a class="white-text waves-effect waves-deep-purple" href="https://jekyllrb.com">Jekyll</a></li>
+                <li><a class="white-text waves-effect waves-deep-purple" href="https://getbootstrap.com">Bootstrap</a></li>
+                <li><a class="white-text waves-effect waves-deep-purple" href="https://materializecss.com">Materialize CSS</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </li>
 
         <li>
           <a class="white-text" href="/">
@@ -102,3 +94,4 @@
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
 </nav>
+</div>

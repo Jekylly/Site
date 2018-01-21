@@ -1,5 +1,4 @@
 ---
 layout: home
 ---
-
-Community driven tutorials for all things Jekylly.
+Community driven Jekyll tutorials and themes.

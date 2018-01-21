@@ -1,0 +1,66 @@
+- section: tutorials
+  urls:
+  - "/jekyll/"
+  - "/jekyll/layouts/"
+  - "/jekyll/plugins/"
+  - "/jekyll/includes/"
+  - "/jekyll/includes/breadcrumbs/"
+  - "/jekyll/includes/google-analytics/"
+  - "/jekyll/includes/carousels/"
+  - "/jekyll/includes/carousels/bootstrap3/"
+  - "/jekyll/includes/carousels/materialize/"
+  pages:
+    - text: Jekyll
+      url: /jekyll/
+    - text: Jekyll Layouts
+      url: /jekyll/layouts/
+    - text: Jekyll Plugins
+      url: /jekyll/plugins/
+    - text: Jekyll Includes
+      url: /jekyll/includes/
+      options:
+        - text: Carousels
+          url: /jekyll/includes/carousels/
+          options:
+            - text: Bootstrap 3
+              url: /jekyll/includes/carousels/bootstrap3/
+            - text: Materialize CSS
+              url: /jekyll/includes/carousels/materialize/
+
+        - text: Breadcrumbs
+          url: /jekyll/includes/breadcrumbs/
+        - text: Google Analytics
+          url: /jekyll/includes/google-analytics/
+- section: themes
+  urls:
+  - "/themes/"
+  - "/themes/layouts/"
+  - "/themes/plugins/"
+  - "/themes/includes/"
+  - "/themes/includes/breadcrumbs/"
+  - "/themes/includes/google-analytics/"
+  - "/themes/includes/carousels/"
+  - "/themes/includes/carousels/bootstrap3/"
+  - "/themes/includes/carousels/materialize/"
+  pages:
+    - text: Jekyll
+      url: /themes/
+    - text: Jekyll Layouts
+      url: /themes/layouts/
+    - text: Jekyll Plugins
+      url: /themes/plugins/
+    - text: Jekyll Includes
+      url: /themes/includes/
+      options:
+        - text: Carousels
+          url: /themes/includes/carousels/
+          options:
+            - text: Bootstrap 3
+              url: /themes/includes/carousels/bootstrap3/
+            - text: Materialize CSS
+              url: /themes/includes/carousels/materialize/
+
+        - text: Breadcrumbs
+          url: /themes/includes/breadcrumbs/
+        - text: Google Analytics
+          url: /themes/includes/google-analytics/
